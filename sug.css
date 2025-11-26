@@ -79,55 +79,38 @@ button:hover {
 }
 
 /* ============================= */
-/*      نسخة الجوال (شاشات ≤600px)      */
+/*    صفحة الاقتراحات للجوال     */
 /* ============================= */
 @media only screen and (max-width: 600px) {
 
-  /* الكونتينرات الأساسية */
-  .menu-container,
-  .cart-page-container,
-  .wrapper {
-    width: 95% !important;
-    margin: 0 auto !important;
+  body {
     padding: 10px !important;
-    box-sizing: border-box;
   }
 
-  /* الصور تتناسب مع الشاشة */
-  img {
-    max-width: 100% !important;
-    height: auto !important;
+  .wrapper {
+    width: 90% !important;
+    padding: 20px !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+    background-size: cover !important;
   }
 
-  /* إعادة ترتيب عناصر المنيو */
-  .menu-item-row {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
+  .wrapper1 {
+    width: 90% !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
   }
 
-  /* صورة المنيو */
-  .item-image-placeholder img {
-    width: 150px !important;
-  }
-
-  /* النصوص */
-  h1, h2, h3 {
-    font-size: 1.4em !important;
-  }
-  p, span, label {
-    font-size: 1em !important;
-  }
-
-  /* الأزرار */
-  button, .add-to-cart-btn, .checkout-btn {
-    width: 100% !important;
+  button {
+    font-size: 14px !important;
     padding: 12px !important;
-    font-size: 1em !important;
   }
 
-  /* تخفيف الكاردات في السلة */
-  .cart-item {
-    text-align: center;
+  input, textarea {
+    font-size: 14px !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
   }
 }
