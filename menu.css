@@ -176,58 +176,60 @@ a.L{
 a:hover{
     color: #374346;
 
-}
-
-/* ============================= */
-/*      نسخة الجوال (شاشات ≤600px)      */
+}/* ============================= */
+/*      نسـخــة الجــوال        */
 /* ============================= */
 @media only screen and (max-width: 600px) {
 
-  /* الكونتينرات الأساسية */
+  /* ضبط الكونتينر */
   .menu-container,
   .cart-page-container,
   .wrapper {
-    width: 95% !important;
-    margin: 0 auto !important;
-    padding: 10px !important;
+    width: 95%;
+    padding: 10px;
     box-sizing: border-box;
   }
 
-  /* الصور تتناسب مع الشاشة */
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  /* إعادة ترتيب عناصر المنيو */
-  .menu-item-row {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
-
-  /* صورة المنيو */
+  /* الصور تصغر فقط — بدون تغيير الترتيب */
   .item-image-placeholder img {
-    width: 150px !important;
+    width: 130px !important;
+    height: auto;
   }
 
-  /* النصوص */
+  /* لا تقلبي الصف نهائياً */
+  .menu-item-row {
+    display: flex;
+    flex-direction: row !important;        /* ⬅️ رجعناه Row */
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* النصوص تبقى يمين */
+  .item-details {
+    width: 55%;
+  }
+
+  /* زيادة مساحة الصورة */
+  .item-image-placeholder {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* أحجام نصوص مناسبة للجوال */
   h1, h2, h3 {
-    font-size: 1.4em !important;
+    font-size: 20px !important;
   }
-  p, span, label {
-    font-size: 1em !important;
-  }
-
-  /* الأزرار */
-  button, .add-to-cart-btn, .checkout-btn {
-    width: 100% !important;
-    padding: 12px !important;
-    font-size: 1em !important;
+  p, span, label, button {
+    font-size: 14px !important;
   }
 
-  /* تخفيف الكاردات في السلة */
-  .cart-item {
-    text-align: center;
+  /* زر الإضافة يناسب عرض الجوال */
+  .add-to-cart-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
   }
 }
