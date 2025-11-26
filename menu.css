@@ -176,60 +176,105 @@ a.L{
 a:hover{
     color: #374346;
 
-}/* ============================= */
-/*      نسـخــة الجــوال        */
+
+/* ============================= */
+/*        نسخة الجوال           */
 /* ============================= */
 @media only screen and (max-width: 600px) {
 
-  /* ضبط الكونتينر */
+  body {
+    padding: 10px !important;
+    font-size: 1em !important;
+  }
+
+  /* الحاوية الرئيسية (منيو + سلة) */
   .menu-container,
-  .cart-page-container,
-  .wrapper {
-    width: 95%;
-    padding: 10px;
-    box-sizing: border-box;
+  .cart-page-container {
+    width: 95% !important;
+    padding: 15px !important;
+    margin: 0 auto !important;
+    border-radius: 10px !important;
+    background-size: cover !important;
   }
 
-  /* الصور تصغر فقط — بدون تغيير الترتيب */
-  .item-image-placeholder img {
-    width: 130px !important;
-    height: auto;
-  }
-
-  /* لا تقلبي الصف نهائياً */
+  /* ===== إصلاح أهم نقطة: لا ينقلب الترتيب ===== */
   .menu-item-row {
-    display: flex;
-    flex-direction: row !important;        /* ⬅️ رجعناه Row */
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+    display: flex !important;
+    flex-direction: row !important;    /* 👈 يبقى الصف أفقي مثل اللابتوب */
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 10px !important;
   }
 
-  /* النصوص تبقى يمين */
-  .item-details {
-    width: 55%;
-  }
-
-  /* زيادة مساحة الصورة */
+  /* الصورة على اليسار — تتصغر فقط */
   .item-image-placeholder {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 50% !important;
   }
 
-  /* أحجام نصوص مناسبة للجوال */
-  h1, h2, h3 {
+  .item-image-placeholder img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* مساحة النصوص */
+  .item-details {
+    width: 60% !important;
+    padding: 0 !important;
+  }
+
+  /* تصغير العناوين */
+  .section-title {
+    font-size: 1.4em !important;
+    border-right-width: 3px !important;
+  }
+
+  h1, h2 {
+    font-size: 1.6em !important;
+  }
+
+  p, span {
+    font-size: 0.95em !important;
+  }
+
+  .item-name {
+    font-size: 1em !important;
+  }
+
+  .item-price {
+    font-size: 1.1em !important;
+  }
+
+  .item-name-price {
+    padding: 5px 0 !important;
+  }
+
+  /* الروابط */
+  a.L {
+    display: block !important;
+    margin-top: 10px;
     font-size: 20px !important;
-  }
-  p, span, label, button {
-    font-size: 14px !important;
+    padding: 8px !important;
   }
 
-  /* زر الإضافة يناسب عرض الجوال */
-  .add-to-cart-btn {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
+  /* السلة */
+  #cart-items-display {
+    padding: 10px !important;
+  }
+
+  .cart-summary-page {
+    font-size: 1.1em !important;
+  }
+
+  .checkout-btn {
+    padding: 10px !important;
+    font-size: 1.1em !important;
+  }
+
+  /* الشعار */
+  img.logo {
+    width: 110px !important;
+    height: 110px !important;
   }
 }
