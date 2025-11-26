@@ -124,59 +124,62 @@ footer {
     bottom: 0;
 }
 /* ============================= */
-/*      نسـخــة الجــوال        */
+/*     الصفحة الرئيسية للجوال    */
 /* ============================= */
 @media only screen and (max-width: 600px) {
 
-  /* ضبط الكونتينر */
-  .menu-container,
-  .cart-page-container,
-  .wrapper {
-    width: 95%;
+  body {
+    font-size: 1em !important;
+    padding: 10px !important;
+  }
+
+  /* الصندوق الرئيسي */
+  .main1 {
+    width: 95% !important;
+    max-width: 95% !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    background-size: cover !important;
+    border-radius: 10px !important;
+  }
+
+  img.logo {
+    width: 110px !important;
+    height: 110px !important;
+  }
+
+  img.list_img {
+    width: 150px !important;
+    height: 150px !important;
+    margin: 10px auto !important;
+    display: block !important;
+  }
+
+  img.press {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+  p.bold {
+    font-size: 28px !important;
+  }
+
+  p.lis {
+    font-size: 28px !important;
+  }
+
+  nav.list {
+    width: 90% !important;
+    margin: 0 auto !important;
     padding: 10px;
-    box-sizing: border-box;
+    border-radius: 15px !important;
   }
 
-  /* الصور تصغر فقط — بدون تغيير الترتيب */
-  .item-image-placeholder img {
-    width: 130px !important;
-    height: auto;
-  }
-
-  /* لا تقلبي الصف نهائياً */
-  .menu-item-row {
-    display: flex;
-    flex-direction: row !important;        /* ⬅️ رجعناه Row */
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-  }
-
-  /* النصوص تبقى يمين */
-  .item-details {
-    width: 55%;
-  }
-
-  /* زيادة مساحة الصورة */
-  .item-image-placeholder {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* أحجام نصوص مناسبة للجوال */
-  h1, h2, h3 {
-    font-size: 20px !important;
-  }
-  p, span, label, button {
-    font-size: 14px !important;
-  }
-
-  /* زر الإضافة يناسب عرض الجوال */
-  .add-to-cart-btn {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
+  a.L {
+    display: block !important;
+    margin: 10px auto !important;
+    width: 90% !important;
+    text-align: center;
+    font-size: 22px !important;
   }
 }
