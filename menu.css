@@ -13,11 +13,13 @@ body {
     max-width: 800px;
     margin: 0 auto;
     background: url(./Image/back2.jpg) no-repeat;
-    background-size: 100%; 
+    background-size: cover; 
+    background: linear-gradient();
     color: #ffffff;
     padding: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
+    border-radius: 5px;  
+    width: fit-content;
 }
 
 /* تنسيق العنوان */
@@ -90,12 +92,14 @@ body {
     font-weight: bold;
 }
 
+/*
 /* تنسيق مكان الصورة */
 .item-image-placeholder {
     width: 250px; /* عرض ثابت للصورة */
     height: 180px; /* ارتفاع ثابت للصورة */
     background-color: #444; /* لون خلفية الصورة قبل وضعها */
     border-radius: 50%; /* شكل دائري للصورة مثل التصميم */
+
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -105,6 +109,9 @@ body {
     font-style: italic;
     flex-shrink: 0; /* لمنع الصورة من الانكماش */
     border: 3px solid #ffcc00; /* إطار ذهبي حول الصورة */
+}
+img.W{
+    width: 200px;
 }
 
 /* فاصل أفقي */
@@ -175,8 +182,7 @@ a.L{
 }
 a:hover{
     color: #374346;
-
-
+}
 /* ============================= */
 /*        نسخة الجوال           */
 /* ============================= */
@@ -195,6 +201,9 @@ a:hover{
     margin: 0 auto !important;
     border-radius: 10px !important;
     background-size: cover !important;
+    max-width: 95% !important;
+    padding: 20px !important;
+    background-size: cover !important;
   }
 
   /* ===== إصلاح أهم نقطة: لا ينقلب الترتيب ===== */
@@ -208,13 +217,13 @@ a:hover{
 
   /* الصورة على اليسار — تتصغر فقط */
   .item-image-placeholder {
-    width: 120px !important;
-    height: 120px !important;
+    width: 90px !important;
+    height: 90px !important;
     border-radius: 50% !important;
   }
 
   .item-image-placeholder img {
-    width: 100% !important;
+    width: 80% !important;
     height: auto !important;
   }
 
@@ -228,6 +237,9 @@ a:hover{
   .section-title {
     font-size: 1.4em !important;
     border-right-width: 3px !important;
+  }
+  .w{
+    width: 40px;
   }
 
   h1, h2 {
@@ -268,8 +280,8 @@ a:hover{
   }
 
   .checkout-btn {
-    padding: 10px !important;
-    font-size: 1.1em !important;
+    padding: 6px !important;
+    font-size: 1em !important;
   }
 
   /* الشعار */
